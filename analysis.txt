@@ -1,0 +1,23 @@
+equals(): O(n) runtime O(1) space
+Checking if the sizes are equal is O(1) because looking up an integer is O(1)
+Searching for the other head is O(n) because all the operations in the search are O(1) and they are executed (worst-case) n times:
+	comparing two elements - O(1)
+	n1 = n1.next           - O(1)
+
+Once the other head is found, iterating through each linked list is O(n) and the operations inside are O(1):
+	comparing two elements - O(1)
+	n1 = n1.next           - O(1)
+
+O(n) * O(1) = O(n)
+
+
+removeDuplicates(): O(n) runtime O(n) space
+It iterates through the list storing values it finds in a HashSet.
+If an element is already in the HashSet, it's O(1) to remove it.
+Worst case it will have to store O(n) elements (if all elements are unique), meaning it's O(n) space worst-case.
+Iterating through the list is O(n) because all operations are O(1) and are executed for each element in the list (n)
+	Hashtable store  - O(1) because it's a hashtable
+	Hashtable lookup - O(1) because it's a hashtable
+	n1 = n1.next     - O(1)
+
+O(n) * O(1) = O(n)
